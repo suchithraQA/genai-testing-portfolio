@@ -1,4 +1,4 @@
-Test_Case_ID,Suite,Title,Prompt_Used,Status,Response_Summary,Date
+
 # 📊 Test Execution Log
 
 | Test Case ID | Suite | Title | Prompt Used | Status | Response Summary | Date |
