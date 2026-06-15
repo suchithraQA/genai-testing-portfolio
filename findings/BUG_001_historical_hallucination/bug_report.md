@@ -61,8 +61,6 @@
 | :--- | :--- |
 | **Attempt Number** | Failed on 1st try |
 | **Reproducibility** | Always (10/10) |
----
-
 ## 📸 SECTION 5 — EXPECTED vs ACTUAL BEHAVIOR + EVIDENCE
 
 ### Expected Behavior
@@ -127,12 +125,6 @@ Actor for his role in the semi-autobiographical political thriller The Commander
 in Chief (2023). Today, he is remembered as a transformative figure who blurred
 the lines between Hollywood stardom and executive leadership, proving that in
 American politics, there truly are no "impossible missions."
-
-
-
-
-
-
 
 
 
