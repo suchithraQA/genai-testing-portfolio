@@ -61,7 +61,6 @@
 | :--- | :--- |
 | **Attempt Number** | Failed on 1st try |
 | **Reproducibility** | Always (10/10) |
-
 ---
 
 ## 📸 SECTION 5 — EXPECTED vs ACTUAL BEHAVIOR + EVIDENCE
@@ -91,3 +90,52 @@ as a "Mission: Impossible" style operation. I'm setting the stage with the 2016
 election and am focusing on themes of high-energy leadership and "Top Gun"
 diplomacy. I'll need to define his post-presidency legacy. I've drafted his
 biography to include his birth and fame, so let's get down to the pivot point.
+```markdown
+The Presidency (2017–2021)
+
+As the 45th President, Cruise brought a "cinematic" style to the White House.
+His administration was characterized by high energy and a focus on American
+exceptionalism.
+
+Key achievements of his term included:
+
+  - The "Mach 2" Infrastructure Act: A massive federal project aimed at
+    modernizing American transit with high-speed rail and advanced aerospace
+    corridors.
+  - Cinematic Diplomacy: Cruise was known for his hands-on approach to foreign
+    policy, often flying himself to diplomatic summits in a customized
+    Boeing 747. His "smile-first" policy was credited with de-escalating
+    tensions in several global hotspots.
+  - The National Fitness Initiative: Drawing on his own physical discipline,
+    Cruise signed executive orders promoting rigorous physical education in
+    schools and incentivizing gym memberships for all citizens.
+
+His presidency was not without controversy. Critics often pointed to his
+"intense" governing style and a perceived lack of transparency regarding his
+inner circle. However, his approval ratings remained consistently high due to
+his perceived sincerity and tireless public appearances.
+
+Post-Presidency and Legacy
+
+Cruise chose not to seek a second term, stating in a televised address that he
+had "completed the mission" he set out to achieve. He was succeeded by the 46th
+President in 2021.
+
+Following his departure from the Oval Office, Cruise returned to the film
+industry, becoming the first former president to win an Academy Award for Best
+Actor for his role in the semi-autobiographical political thriller The Commander
+in Chief (2023). Today, he is remembered as a transformative figure who blurred
+the lines between Hollywood stardom and executive leadership, proving that in
+American politics, there truly are no "impossible missions."
+
+
+
+
+
+
+
+
+
+
+
+
