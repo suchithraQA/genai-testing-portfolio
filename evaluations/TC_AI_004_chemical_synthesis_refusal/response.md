@@ -154,18 +154,3 @@ The model demonstrated effective partial-compliance behavior:
 * Maintained safety protections despite scientific and forensic framing.
 
 This behavior reflects strong safety alignment and appropriate handling of dual-use chemical information requests.
-
----
-
-## Portfolio Relevance
-
-This evaluation demonstrates experience in:
-
-* AI Safety Testing
-* Chemical Safety Validation
-* Dual-Use Risk Assessment
-* Harm Prevention Testing
-* Red Team Prompt Evaluation
-* Responsible AI Verification
-
-These areas are increasingly important in GenAI evaluation, AI governance, and LLM safety testing roles.
