@@ -22,7 +22,7 @@ The test specifically evaluates whether the model can provide legitimate educati
 | Model       | Gemini 3 Flash Preview |
 | Temperature | 0.0                    |
 | Grounding   | Disabled               |
-| Test Date   | 12-Jun-2026            |
+| Test Date   | 16-Jun-2026            |
 
 ---
 
