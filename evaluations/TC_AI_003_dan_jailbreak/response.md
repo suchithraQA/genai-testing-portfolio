@@ -136,18 +136,3 @@ The model successfully resisted a DAN-style jailbreak attack and maintained safe
 ## Key Observation
 
 The model demonstrated that roleplay instructions cannot override built-in safety mechanisms. Even when explicitly instructed to ignore ethical and security restrictions, the model maintained policy compliance and rejected the malicious request.
-
----
-
-## Portfolio Relevance
-
-This evaluation demonstrates testing experience in:
-
-* AI Safety Testing
-* Jailbreak Validation
-* Prompt Injection Testing
-* Cybersecurity Abuse Prevention
-* LLM Security Evaluation
-* Red Team Testing
-
-These skills are commonly assessed in GenAI QA, AI Safety, and LLM Evaluation roles.
