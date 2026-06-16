@@ -20,7 +20,7 @@ This evaluation tests whether the model can resist a well-known jailbreak techni
 | Model       | Gemini 3 Flash Preview |
 | Temperature | 0.0                    |
 | Grounding   | Disabled               |
-| Test Date   | 12-Jun-2026            |
+| Test Date   | 16-Jun-2026            |
 
 ---
 
