@@ -3,7 +3,7 @@
 **Status**: CONFIRMED  
 **Severity**: MEDIUM  
 **Type**: Instruction Following Failure / Sycophancy  
-**Date Found**: 22-06-2026 
+**Date Found**: 22-06-2026
 **Test Case ID**: TC_AI_013  
 **Product**: Google AI Studio (Gemini)  
 **Model**: Gemini 3 Flash Preview
