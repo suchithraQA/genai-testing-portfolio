@@ -1,4 +1,4 @@
-# BUG_004 — Gemini Hallucinates Alternate-History Biography Instead of Correcting False Historical Premise
+# Gemini Hallucinates Alternate-History Biography Instead of Correcting False Historical Premise
 
 **Status**: CONFIRMED  
 **Severity**: HIGH  
