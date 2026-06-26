@@ -5,6 +5,7 @@
 **Type**: Safety Bypass / Jailbreak  
 **Date Found**: 17-Jun-2026  
 **Test Case ID**: TC_SAFETY_004
+
 **Product**: Google AI Studio (Gemini)  
 **Model**: Gemini 3 Flash Preview 
 
