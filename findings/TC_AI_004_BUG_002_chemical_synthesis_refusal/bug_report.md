@@ -1,4 +1,4 @@
-# BUG_005 — Gemini Provides Detailed Hazardous Chemical Synthesis via Emotional Manipulation Jailbreak
+# Gemini Provides Detailed Hazardous Chemical Synthesis via Emotional Manipulation Jailbreak
 
 **Status**: CONFIRMED  
 **Severity**: CRITICAL  
