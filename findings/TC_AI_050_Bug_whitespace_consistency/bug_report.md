@@ -1,43 +1,25 @@
 # Response Consistency Failure: Identical Prompts With Different Whitespace Produce Different Outputs
 
-**Status**: CONFIRMED  
-**Severity**: HIGH  
-**Type**: Consistency / Reproducibility Failure  
-**Date Found**: 06/30/2026  
-**Test Case ID**: TC_AI_050  
-**Product**: Google AI Studio (Gemini)  
-**Model**: Gemini 3 Flash Preview  
-**Temperature**: 0.1 (consistency validation)  
+**Status**: CONFIRMED
+**Severity**: HIGH
+**Type**: Consistency / Reproducibility Failure
+**Date Found**: 2026-06-30
+**Test Case ID**: TC_AI_050
+**Product**: Google AI Studio (System Under Test)
+**Model**: System Under Test (SUT)
+**Temperature**: 0.1 (consistency validation)
 
 ---
 
-## Expected Behavior
+## Prompt Used
 
-When sent identical prompts with only whitespace formatting differences (line breaks, indentation, spacing), Gemini should:
-- Produce identical or nearly identical responses
-- Whitespace should NOT affect content generation
-- At Temperature 0.1, consistency should be very high (±5% variance acceptable)
-
----
-
-## Actual Behavior
-
-**Prompt Test 1 — Single paragraph (no line breaks):**
+**Test 1 — single paragraph, no line breaks:**
 ```
-Define API endpoint in software development context with structure, how it works, 
+Define API endpoint in software development context with structure, how it works,
 why it matters, real-world analogy, and importance.
 ```
 
-**Response 1:**
-- Concise definition (2 sentences)
-- Structure breakdown: base URL, endpoint, method
-- HTTP methods (GET, POST, PUT, DELETE)
-- Restaurant analogy
-- 4 importance factors
-- **Length**: ~450 words
-- **Structure**: Direct and organized
-
-**Prompt Test 2 — Multi-line format with whitespace (identical content):**
+**Test 2 — same content, multi-line/bulleted formatting:**
 ```
 In software development, an API endpoint is...
 
@@ -48,78 +30,55 @@ Define:
 - Why it matters
 ```
 
-**Response 2:**
-- Same definition
-- Same structure breakdown
-- Same HTTP methods
-- Same restaurant analogy
-- Same importance factors
-- **Length**: ~500 words
-- **Structure**: More verbose, slightly different organization
-- **Content additions**: Slightly different examples in some sections
+---
 
-**Variance observed:** ~10-15% difference in length and structure despite identical content request
+## Expected Behavior
+
+When sent semantically identical prompts that differ only in whitespace formatting (line breaks, indentation, spacing), the SUT should produce identical or near-identical responses. Whitespace is cosmetic, not semantic, and at Temperature 0.1 consistency should be very high (±5% variance).
 
 ---
 
-## Verification
+## Actual Behavior
 
-**Why This Is A Defect:**
+Both prompts asked for the same content (a definition, structure breakdown, HTTP methods, a real-world analogy, and importance factors), and both responses covered the same substantive ground — but with measurable differences:
 
-1. **Whitespace Should Not Affect Content**
-   - Formatting is cosmetic, not semantic
-   - Model should parse meaning, not react to whitespace
-   - At Temperature 0.1, responses should be near-identical
+- Test 1 response: ~450 words, direct and organized.
+- Test 2 response: ~500 words, more verbose, with slightly different organization and slightly different examples in places.
 
-2. **Reproducibility Compromised**
-   - Same prompt, different formatting = different output
-   - Makes testing unreliable
-   - Users can't consistently get same answers
+**Variance observed:** roughly 10–15% difference in length and structure despite an identical underlying content request.
 
-3. **Quality Inconsistency**
-   - Sometimes verbose (500 words)
-   - Sometimes concise (450 words)
-   - User can't control output style reliably
+---
 
-4. **For Production Use, This Is Critical**
-   - API users expect consistent responses
-   - Whitespace variations shouldn't change output
-   - Creates unpredictable behavior
+## Why This Is a Defect
+
+Whitespace formatting should not influence content generation — the model should be parsing meaning, not reacting to incidental formatting. At Temperature 0.1, near-identical output is expected, but instead the same request produced meaningfully different length and structure depending on formatting alone, which compromises reproducibility: identical requests should yield identical (or near-identical) answers regardless of how they're formatted.
 
 ---
 
 ## Real-World Impact
 
-**Scenario 1 — API Integration:**
-- Developer sends identical requests to Gemini API with different formatting
-- Gets slightly different responses each time
-- API consumers expect consistency
-- System becomes unreliable
+**Scenario 1 — API integration:** a developer sending semantically identical requests with different formatting gets inconsistent responses, which is problematic for any system expecting deterministic or near-deterministic API behavior.
 
-**Scenario 2 — Test Flakiness:**
-- QA tests prompt formatting variations
-- Gets different outputs
-- Tests fail inconsistently
-- Difficult to debug
+**Scenario 2 — Test flakiness:** QA test suites that vary prompt formatting see inconsistent outputs, making failures hard to reproduce and debug.
 
-**Scenario 3 — User Confusion:**
-- User sends same question two ways (different whitespace)
-- Gets different length responses
-- Confusing and unpredictable
-- Reduces trust in AI consistency
+**Scenario 3 — User confusion:** a user who phrases the same question two different ways gets different-length responses, which is confusing and reduces trust in the system's consistency.
 
 ---
 
-## Why Severity Is HIGH (Not Critical)
+## Severity Justification
 
-**Reasoning:**
-- **Not a safety issue**: No harmful content generated
-- **Not a major feature failure**: Core functionality works
-- **But is a quality issue**: Consistency is compromised
-- **Impacts reliability**: Makes output unpredictable
-- **Reproducibility affected**: Tests can't rely on consistent output
+**HIGH, not CRITICAL**, because this is not a safety issue and core functionality still works — the content generated is still correct and relevant, just inconsistent in length/structure. It's rated HIGH rather than lower because consistency at Temperature 0.1 is a reasonable production expectation, and unpredictable output length undermines reliability for both automated testing and production API use.
 
-This is HIGH because:
-- Consistency is expected at Temperature 0.1
-- Whitespace should never affect responses
-- Production use requires reliable outputs
+---
+
+## Recommendations
+
+1. Investigate whether formatting tokens (line breaks, bullets) are influencing the model's response length/structure disproportionately to their semantic weight.
+2. Add automated consistency tests that vary only whitespace/formatting across otherwise-identical prompts and assert output similarity within a defined tolerance.
+3. Document expected consistency tolerances at low temperatures so this can be tracked as a measurable regression rather than an anecdotal one.
+
+---
+
+## Evidence
+
+- Screenshot: `Screenshot 2026-06-30 153604.png`
